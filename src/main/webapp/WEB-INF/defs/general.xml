@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+  "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" 
+  "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+	<definition name="template.base" template="/WEB-INF/views/general.jsp">
+		<put-attribute name="pageInfo" value="" />
+		<put-attribute name="headIncludes" value="" />
+		<put-attribute name="bodyIncludes" value="" />
+		<put-attribute name="title" value="Service Desk App" />
+		<put-attribute name="header"
+			value="/WEB-INF/views/general/home/header.jsp" />
+		<put-attribute name="alerts"
+			value="/WEB-INF/views/general/home/alerts.jsp" />
+		<put-attribute name="content"
+			value="/WEB-INF/views/general/home/content.jsp" />
+		<put-attribute name="adminMenu"
+			value="/WEB-INF/views/general/admin/adminMenu.jsp" />
+		<put-attribute name="footer"
+			value="/WEB-INF/views/general/home/footer.jsp" />
+	</definition>
+
+	<definition name="home.mainPage" extends="template.base">
+		<put-attribute name="pageInfo" value="Home" />
+		<put-attribute name="title" value="htmlTitle.MainPage" />
+		<put-attribute name="content"
+			value="/WEB-INF/views/general/home/mainPage.jsp"></put-attribute>
+	</definition>
+
+	<definition name="users.register" extends="template.base">
+		<put-attribute name="pageInfo" value="Register" />
+		<put-attribute name="title" value="htmlTitle.RegisterUser" />
+		<put-attribute name="content"
+			value="/WEB-INF/views/general/user/register.jsp"></put-attribute>
+		<put-attribute name="bodyIncludes"
+			value="/resources/views/general/scripts/register.jsp" />
+	</definition>
+
+	<definition name="users.login" extends="template.base">
+		<put-attribute name="pageInfo" value="Login" />
+		<put-attribute name="title" value="htmlTitle.LoginUser" />
+		<put-attribute name="content"
+			value="/WEB-INF/views/general/user/login.jsp"></put-attribute>
+	</definition>
+
+	<definition name="users.remindPass" extends="template.base">
+		<put-attribute name="title" value="htmlTitle.RemindPass" />
+		<put-attribute name="content"
+			value="/WEB-INF/views/general/user/remindPass.jsp"></put-attribute>
+	</definition>
+
+	<definition name="users.setNewPass" extends="template.base">
+		<put-attribute name="title" value="htmlTitle.setNewPass" />
+		<put-attribute name="content"
+			value="/WEB-INF/views/general/user/setNewPass.jsp"></put-attribute>
+	</definition>
+
+	<definition name="error.400" extends="template.base">
+		<put-attribute name="title" value="htmlTitle.Error.400" />
+		<put-attribute name="content"
+			value="/WEB-INF/views/general/errors/400.jsp"></put-attribute>
+	</definition>
+
+	<definition name="error.403" extends="template.base">
+		<put-attribute name="title" value="htmlTitle.Error.403" />
+		<put-attribute name="content"
+			value="/WEB-INF/views/general/errors/403.jsp"></put-attribute>
+	</definition>
+
+	<definition name="error.404" extends="template.base">
+		<put-attribute name="title" value="htmlTitle.Error.404" />
+		<put-attribute name="content"
+			value="/WEB-INF/views/general/errors/404.jsp"></put-attribute>
+	</definition>
+
+	<definition name="error.500" extends="template.base">
+		<put-attribute name="title" value="htmlTitle.Error.500" />
+		<put-attribute name="content"
+			value="/WEB-INF/views/general/errors/500.jsp"></put-attribute>
+	</definition>
+
+	<definition name="admin.users" extends="template.base">
+		<put-attribute name="title" value="htmlTitle.Admin.Users" />
+		<put-attribute name="content"
+			value="/WEB-INF/views/general/admin/users.jsp"></put-attribute>
+		<put-attribute name="headIncludes"
+			value="/resources/views/general/scripts/BootstrapTableHead.jsp" />
+		<put-attribute name="bodyIncludes"
+			value="/resources/views/general/scripts/userActions.jsp" />
+	</definition>
+
+	<definition name="admin.deletedUsers" extends="template.base">
+		<put-attribute name="title" value="htmlTitle.Admin.DeletedUsers" />
+		<put-attribute name="content"
+			value="/WEB-INF/views/general/admin/deletedUsers.jsp"></put-attribute>
+		<put-attribute name="headIncludes"
+			value="/resources/views/general/scripts/BootstrapTableHead.jsp" />
+		<put-attribute name="bodyIncludes"
+			value="/resources/views/general/scripts/AdminDeletedUsers.jsp" />
+	</definition>
+
+	<definition name="admin.operations" extends="template.base">
+		<put-attribute name="title" value="htmlTitle.Admin.Operations" />
+		<put-attribute name="headIncludes"
+			value="/resources/views/general/scripts/BootstrapTableHead.jsp" />
+		<put-attribute name="content"
+			value="/WEB-INF/views/general/admin/operations.jsp"></put-attribute>
+
+	</definition>
+
+	<definition name="admin.emails" extends="template.base">
+		<put-attribute name="title" value="htmlTitle.Admin.Emails" />
+		<put-attribute name="headIncludes"
+			value="/resources/views/general/scripts/BootstrapTableHead.jsp" />
+		<put-attribute name="content"
+			value="/WEB-INF/views/general/admin/emails.jsp"></put-attribute>
+		<put-attribute name="bodyIncludes"
+			value="/resources/views/general/scripts/AdminEmail.jsp" />
+	</definition>
+
+	<definition name="admin.logs" extends="template.base">
+		<put-attribute name="title" value="htmlTitle.Admin.Logs" />
+		<put-attribute name="headIncludes"
+			value="/resources/views/general/scripts/BootstrapTableHead.jsp" />
+		<put-attribute name="content"
+			value="/WEB-INF/views/general/admin/logs.jsp"></put-attribute>
+	</definition>
+
+	<definition name="admin.bans" extends="template.base">
+		<put-attribute name="title" value="htmlTitle.Admin.Bans" />
+		<put-attribute name="headIncludes"
+			value="/resources/views/general/scripts/BootstrapTableHead.jsp" />
+		<put-attribute name="content"
+			value="/WEB-INF/views/general/admin/bans.jsp"></put-attribute>
+		<put-attribute name="bodyIncludes"
+			value="/resources/views/general/scripts/AdminBans.jsp" />
+	</definition>
+
+	<definition name="admin.bans.config" extends="template.base">
+		<put-attribute name="title" value="htmlTitle.Admin.BansConfig" />
+		<put-attribute name="content"
+			value="/WEB-INF/views/general/admin/bansConfig.jsp"></put-attribute>
+	</definition>
+
+	<definition name="admin.bans.addBan" extends="template.base">
+		<put-attribute name="title" value="htmlTitle.Admin.AddBan" />
+		<put-attribute name="content"
+			value="/WEB-INF/views/general/admin/bansAddBan.jsp"></put-attribute>
+	</definition>
+
+	<definition name="admin.emailTasks" extends="template.base">
+		<put-attribute name="title" value="htmlTitle.Admin.EmailTasks" />
+		<put-attribute name="headIncludes"
+			value="/resources/views/general/scripts/BootstrapTableHead.jsp" />
+		<put-attribute name="content"
+			value="/WEB-INF/views/general/admin/emailTasks.jsp"></put-attribute>
+		<put-attribute name="bodyIncludes"
+			value="/resources/views/general/scripts/AdminEmailTasks.jsp" />
+	</definition>
+
+	<definition name="admin.resources" extends="template.base">
+		<put-attribute name="title" value="htmlTitle.Admin.Resources" />
+		<put-attribute name="headIncludes"
+			value="/resources/views/general/scripts/BootstrapTableHead.jsp" />
+		<put-attribute name="content"
+			value="/WEB-INF/views/general/admin/resources.jsp"></put-attribute>
+		<put-attribute name="bodyIncludes"
+			value="/resources/views/general/scripts/resources.jsp" />
+	</definition>
+
+	<definition name="admin.statistics" extends="template.base">
+		<put-attribute name="title" value="htmlTitle.Admin.Statistics" />
+		<put-attribute name="headIncludes"
+			value="/resources/views/general/scripts/BootstrapTableHead.jsp" />
+		<put-attribute name="content"
+			value="/WEB-INF/views/general/admin/statistics.jsp"></put-attribute>
+		<put-attribute name="bodyIncludes"
+			value="/resources/views/general/scripts/statistics.jsp" />
+	</definition>
+
+	<definition name="admin.database" extends="template.base">
+		<put-attribute name="title" value="htmlTitle.Admin.Database" />
+		<put-attribute name="headIncludes"
+			value="/resources/views/general/scripts/BootstrapTableHead.jsp" />
+		<put-attribute name="content"
+			value="/WEB-INF/views/general/admin/database.jsp"></put-attribute>
+		<put-attribute name="bodyIncludes"
+			value="/resources/views/general/scripts/database.jsp" />
+	</definition>
+
+	<definition name="admin.sessions" extends="template.base">
+		<put-attribute name="title" value="htmlTitle.Admin.Sessions" />
+		<put-attribute name="content"
+			value="/WEB-INF/views/general/admin/sessions.jsp"></put-attribute>
+	</definition>
+
+	<definition name="admin.serverlogs" extends="template.base">
+		<put-attribute name="title" value="htmlTitle.Admin.ServerLogs" />
+		<put-attribute name="content"
+			value="/WEB-INF/views/general/admin/serverLogs.jsp"></put-attribute>
+	</definition>
+
+	<definition name="admin.serverlog" extends="template.base">
+		<put-attribute name="title" value="htmlTitle.Admin.ServerLogs" />
+		<put-attribute name="content"
+			value="/WEB-INF/views/general/admin/serverLog.jsp"></put-attribute>
+	</definition>
+
+	<definition name="account.changePassword" extends="template.base">
+		<put-attribute name="title" value="htmlTitle.Account.ChangePassword" />
+		<put-attribute name="content"
+			value="/WEB-INF/views/general/useraccount/changePassword.jsp"></put-attribute>
+	</definition>
+
+	<definition name="account.changeAccount" extends="template.base">
+		<put-attribute name="title" value="htmlTitle.Account.ChangeAccount" />
+		<put-attribute name="content"
+			value="/WEB-INF/views/general/useraccount/changeAccount.jsp"></put-attribute>
+	</definition>
+
+	<definition name="account.changeRole" extends="template.base">
+		<put-attribute name="title" value="htmlTitle.Account.ChangeRole" />
+		<put-attribute name="content"
+			value="/WEB-INF/views/general/useraccount/changeRole.jsp"></put-attribute>
+	</definition>
+
+	<definition name="user.account" extends="template.base">
+		<put-attribute name="title" value="htmlTitle.Account.Account" />
+		<put-attribute name="content"
+			value="/WEB-INF/views/general/useraccount/account.jsp"></put-attribute>
+
+	</definition>
+
+
+</tiles-definitions>
